@@ -6,6 +6,7 @@ using MonkeyLoader.Resonite;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,7 +61,7 @@ namespace InspectorPowerTools
             switch (container)
             {
                 case Slot slot:
-                    foreach (var component in slot.Components)
+                    foreach (var component in slot.Components.ToArray())
                     {
                         if (workerFilter(component) && component is not GizmoLink)
                         {
@@ -72,7 +73,7 @@ namespace InspectorPowerTools
                     break;
 
                 case User user:
-                    foreach (var userComponent in user.Components)
+                    foreach (var userComponent in user.Components.ToArray())
                     {
                         if (workerFilter(userComponent))
                         {
@@ -81,7 +82,7 @@ namespace InspectorPowerTools
                         }
                     }
 
-                    foreach (var stream in user.Streams)
+                    foreach (var stream in user.Streams.ToArray())
                     {
                         if (workerFilter(stream))
                         {
