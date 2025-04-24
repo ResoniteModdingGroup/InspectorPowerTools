@@ -2,6 +2,7 @@
 using FrooxEngine;
 using FrooxEngine.UIX;
 using HarmonyLib;
+using MonkeyLoader.Components;
 using MonkeyLoader.Resonite;
 using System;
 using System.Collections.Generic;
@@ -63,7 +64,7 @@ namespace InspectorPowerTools
                 case Slot slot:
                     foreach (var component in slot.Components.ToArray())
                     {
-                        if (workerFilter(component) && component is not GizmoLink)
+                        if (!component.IsRemoved && workerFilter(component) && component is not GizmoLink)
                         {
                             __instance.BuildUIForComponent(component, memberFilter: memberFilter);
                             await default(NextUpdate);
@@ -75,7 +76,7 @@ namespace InspectorPowerTools
                 case User user:
                     foreach (var userComponent in user.Components.ToArray())
                     {
-                        if (workerFilter(userComponent))
+                        if (!userComponent.IsRemoved && workerFilter(userComponent))
                         {
                             __instance.BuildUIForComponent(userComponent, memberFilter: memberFilter);
                             await default(NextUpdate);
@@ -84,7 +85,7 @@ namespace InspectorPowerTools
 
                     foreach (var stream in user.Streams.ToArray())
                     {
-                        if (workerFilter(stream))
+                        if (!stream.IsRemoved && workerFilter(stream))
                         {
                             __instance.BuildUIForComponent(stream, memberFilter: memberFilter);
                             await default(NextUpdate);
