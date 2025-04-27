@@ -13,6 +13,8 @@ namespace InspectorPowerTools
     internal sealed class CopySyncMemberToClipboardAction
         : ResoniteAsyncEventHandlerMonkey<CopySyncMemberToClipboardAction, InspectorMemberActionsMenuItemsGenerationEvent>
     {
+        public override bool CanBeDisabled => true;
+
         public override int Priority => HarmonyLib.Priority.Normal;
 
         protected override bool AppliesTo(InspectorMemberActionsMenuItemsGenerationEvent eventData)
