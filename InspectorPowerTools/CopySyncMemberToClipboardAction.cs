@@ -3,7 +3,6 @@ using MonkeyLoader;
 using MonkeyLoader.Meta;
 using MonkeyLoader.Resonite;
 using MonkeyLoader.Resonite.UI.Inspectors;
-using System.Threading.Tasks;
 
 namespace InspectorPowerTools
 {
