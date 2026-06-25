@@ -2,6 +2,8 @@
   "localeCode": "en",
   "authors": [ "Banane9" ],
   "messages": {
-    "InspectorPowerTools.CopyToClipboard": "Copy to Clipboard"
+    "InspectorPowerTools.CopyToClipboard": "Copy to Clipboard",
+
+    "InspectorPowerTools.BreakDragAndDropCopiedComponentDrives.Description": "Fixes copying components using drag-and-drop breaking drives.<size=50%><br/><br/></size>Will disable itself in favor of the Community Bug-Fix Collection implementation."
   }
 }
