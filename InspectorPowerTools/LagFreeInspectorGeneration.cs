@@ -2,15 +2,7 @@
 using FrooxEngine;
 using FrooxEngine.UIX;
 using HarmonyLib;
-using MonkeyLoader.Components;
 using MonkeyLoader.Resonite;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InspectorPowerTools
 {
