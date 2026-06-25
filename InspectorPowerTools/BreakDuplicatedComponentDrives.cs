@@ -4,9 +4,6 @@ using HarmonyLib;
 using MonkeyLoader.Meta;
 using MonkeyLoader;
 using MonkeyLoader.Resonite;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 using static FrooxEngine.Worker;
 
