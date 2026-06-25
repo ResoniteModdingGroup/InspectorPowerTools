@@ -3,9 +3,6 @@ using MonkeyLoader;
 using MonkeyLoader.Meta;
 using MonkeyLoader.Resonite;
 using MonkeyLoader.Resonite.UI.Inspectors;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace InspectorPowerTools
@@ -29,8 +26,8 @@ namespace InspectorPowerTools
             // Context Menu is local user only anyways, no need to use local action button
             menuItem.Button.LocalPressed += (button, _) =>
             {
-                button.World.InputInterface.Clipboard.SetText(field.BoxedValue.ToString());
-                button.World.LocalUser.CloseContextMenu(eventData.MemberActions);
+                button.World.InputInterface.Clipboard?.SetText(field.BoxedValue?.ToString() ?? "");
+                button.World.LocalUser.CloseContextMenu(eventData.Summoner);
             };
 
             return Task.CompletedTask;
