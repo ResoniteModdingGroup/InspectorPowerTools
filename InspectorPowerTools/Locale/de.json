@@ -2,6 +2,8 @@
   "localeCode": "de",
   "authors": [ "Banane9" ],
   "messages": {
-    "InspectorPowerTools.CopyToClipboard": "In Zwischenablage kopieren"
+    "InspectorPowerTools.CopyToClipboard": "In Zwischenablage kopieren",
+
+    "InspectorPowerTools.BreakDragAndDropCopiedComponentDrives.Description": "Sorgt dafür, dass Drives beim Kopieren von Komponenten mittels Drag-und-Drop nicht kaputt gehen.<size=50%><br/><br/></size>Deaktiviert sich zugunsten der Implementierung aus der Community Bug-Fix Collection Sammlung."
   }
 }
